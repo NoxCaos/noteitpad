@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>res/SaveFileIcon.ico</file>
+        <file>res/AboutIcon.ico</file>
+        <file>res/NewFileIcon.ico</file>
+        <file>res/OpenFileIcon.ico</file>
+        <file>res/MainWindow.ico</file>
+    </qresource>
+</RCC>
