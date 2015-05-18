@@ -2,6 +2,7 @@
 #define EDITORWINDOW_H
 
 #include <QMainWindow>
+<<<<<<< HEAD
 #include <QVector>
 
 #include <QFileDialog>
@@ -10,6 +11,8 @@
 #include <QTime>
 
 #include "editorwidget.h"
+=======
+>>>>>>> origin/master
 
 namespace Ui {
 class EditorWindow;
@@ -20,16 +23,22 @@ class EditorWindow : public QMainWindow
     Q_OBJECT
 
 public:
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     explicit EditorWindow(QWidget *parent = 0);
     ~EditorWindow();
 
 private slots:
 
+<<<<<<< HEAD
     // New tab creation
     void on_actionNew_triggered();
 
     /*
+=======
+>>>>>>> origin/master
     // Shortcuts functionality
     void on_actionList_triggered(bool condition);
     void on_actionNumberedList_triggered(bool condition);
@@ -41,6 +50,7 @@ private slots:
     void on_actionOpen_triggered();
 
     // Supplemental functionality
+<<<<<<< HEAD
 
     void on_actionNew_triggered();
     void on_actionSaveAs_triggered();
@@ -79,6 +89,35 @@ private:
     void SetLetters(bool isCapital);
 
     void createTab(QString tabName = QString("Untitled"));
+=======
+    void on_txtEditorField_textChanged();
+
+    void on_actionNew_triggered();
+
+    void on_actionSaveAs_triggered();
+
+    void on_actionHelp_triggered();
+
+protected:
+    void closeEvent(QCloseEvent *e);
+
+private:
+    Ui::EditorWindow *ui;
+
+    bool documentWasSaved;
+    bool markedListOn;
+    bool numberedListOn;
+    int numberedListCounter;
+
+    bool textWasChanged;
+
+    QString currentFileName;
+
+    bool haveUnsavedChanges();
+    bool eventFilter(QObject *obj, QEvent *e);
+
+    void resetToBaseState();
+>>>>>>> origin/master
 };
 
 #endif // EDITORWINDOW_H

@@ -14,6 +14,7 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         editorwindow.cpp \
+<<<<<<< HEAD
     aboutwindow.cpp \
     editorwidget.cpp \
     editorsettings.cpp \
@@ -24,6 +25,12 @@ HEADERS  += editorwindow.h \
     aboutwindow.h \
     editorwidget.h \
     editorsettings.h
+=======
+    aboutwindow.cpp
+
+HEADERS  += editorwindow.h \
+    aboutwindow.h
+>>>>>>> origin/master
 
 FORMS    += editorwindow.ui \
     aboutwindow.ui

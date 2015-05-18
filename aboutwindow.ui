@@ -10,7 +10,11 @@
     <x>0</x>
     <y>0</y>
     <width>290</width>
+<<<<<<< HEAD
     <height>264</height>
+=======
+    <height>249</height>
+>>>>>>> origin/master
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +30,11 @@
      <x>0</x>
      <y>3</y>
      <width>291</width>
+<<<<<<< HEAD
      <height>261</height>
+=======
+     <height>241</height>
+>>>>>>> origin/master
     </rect>
    </property>
    <widget class="QGroupBox" name="gbHelp">
@@ -35,7 +43,11 @@
       <x>10</x>
       <y>0</y>
       <width>271</width>
+<<<<<<< HEAD
       <height>161</height>
+=======
+      <height>151</height>
+>>>>>>> origin/master
      </rect>
     </property>
     <property name="font">
@@ -53,7 +65,11 @@
        <x>10</x>
        <y>20</y>
        <width>281</width>
+<<<<<<< HEAD
        <height>141</height>
+=======
+       <height>121</height>
+>>>>>>> origin/master
       </rect>
      </property>
      <property name="font">
@@ -71,8 +87,12 @@ Ctrl + &quot; N &quot; - New file
 Alt + &quot; 1 &quot; - Numbered list
 Alt + &quot; + &quot; - Marked list
 Alt + &quot; 2 &quot; - Separator line
+<<<<<<< HEAD
 Alt + &quot; - &quot; - Header line
 Alt + &quot; -&gt;&quot; - Definition</string>
+=======
+Alt + &quot; - &quot; - Header line</string>
+>>>>>>> origin/master
      </property>
     </widget>
    </widget>
@@ -80,7 +100,11 @@ Alt + &quot; -&gt;&quot; - Definition</string>
     <property name="geometry">
      <rect>
       <x>10</x>
+<<<<<<< HEAD
       <y>170</y>
+=======
+      <y>150</y>
+>>>>>>> origin/master
       <width>271</width>
       <height>81</height>
      </rect>
@@ -94,12 +118,20 @@ Alt + &quot; -&gt;&quot; - Definition</string>
     <property name="title">
      <string>About</string>
     </property>
+<<<<<<< HEAD
     <widget class="QPushButton" name="btnOpenBitbucket">
+=======
+    <widget class="QPushButton" name="btnOpenWebsite">
+>>>>>>> origin/master
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>50</y>
+<<<<<<< HEAD
        <width>81</width>
+=======
+       <width>161</width>
+>>>>>>> origin/master
        <height>23</height>
       </rect>
      </property>
@@ -108,11 +140,16 @@ Alt + &quot; -&gt;&quot; - Definition</string>
        <pointsize>8</pointsize>
       </font>
      </property>
+<<<<<<< HEAD
      <property name="focusPolicy">
       <enum>Qt::ClickFocus</enum>
      </property>
      <property name="text">
       <string>Bitbucket</string>
+=======
+     <property name="text">
+      <string>Visit Bitbucket page</string>
+>>>>>>> origin/master
      </property>
     </widget>
     <widget class="QLabel" name="lblCopyright">
@@ -147,6 +184,7 @@ Alt + &quot; -&gt;&quot; - Definition</string>
 to make notes of their lectures</string>
      </property>
     </widget>
+<<<<<<< HEAD
     <widget class="QPushButton" name="btnOpenGithub">
      <property name="geometry">
       <rect>
@@ -168,6 +206,8 @@ to make notes of their lectures</string>
       <string>GitHub</string>
      </property>
     </widget>
+=======
+>>>>>>> origin/master
    </widget>
   </widget>
  </widget>

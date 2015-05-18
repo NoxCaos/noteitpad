@@ -2,19 +2,31 @@
 <ui version="4.0">
  <class>EditorWindow</class>
  <widget class="QMainWindow" name="EditorWindow">
+<<<<<<< HEAD
   <property name="enabled">
    <bool>true</bool>
   </property>
+=======
+>>>>>>> origin/master
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>535</width>
     <height>620</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
    <enum>Qt::DefaultContextMenu</enum>
+=======
+    <width>528</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+>>>>>>> origin/master
   </property>
   <property name="windowTitle">
    <string>NoteIt Text Editor</string>
@@ -27,10 +39,17 @@
    <widget class="QWidget" name="wEditorContainer" native="true">
     <property name="geometry">
      <rect>
+<<<<<<< HEAD
       <x>-1</x>
       <y>0</y>
       <width>539</width>
       <height>531</height>
+=======
+      <x>0</x>
+      <y>0</y>
+      <width>528</width>
+      <height>561</height>
+>>>>>>> origin/master
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -47,6 +66,7 @@
       <number>1</number>
      </property>
      <item row="0" column="0">
+<<<<<<< HEAD
       <widget class="QTabWidget" name="tabWidget">
        <property name="font">
         <font>
@@ -158,6 +178,15 @@
        <property name="text">
         <string>Lecture #</string>
        </property>
+=======
+      <widget class="QPlainTextEdit" name="txtEditorField">
+       <property name="font">
+        <font>
+         <family>Lucida Console</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+>>>>>>> origin/master
       </widget>
      </item>
     </layout>
@@ -235,7 +264,11 @@
     </font>
    </property>
    <property name="contextMenuPolicy">
+<<<<<<< HEAD
     <enum>Qt::NoContextMenu</enum>
+=======
+    <enum>Qt::DefaultContextMenu</enum>
+>>>>>>> origin/master
    </property>
    <property name="movable">
     <bool>false</bool>
@@ -261,20 +294,32 @@
    <addaction name="separator"/>
    <addaction name="actionHeader"/>
    <addaction name="separator"/>
+<<<<<<< HEAD
    <addaction name="actionLecture"/>
    <addaction name="separator"/>
    <addaction name="actionDefinition"/>
    <addaction name="separator"/>
    <addaction name="actionMarkedList"/>
+=======
+   <addaction name="actionList"/>
+>>>>>>> origin/master
    <addaction name="separator"/>
    <addaction name="actionNumberedList"/>
    <addaction name="separator"/>
    <addaction name="actionHelp"/>
+<<<<<<< HEAD
+=======
+   <addaction name="separator"/>
+>>>>>>> origin/master
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionLineTildas">
    <property name="text">
+<<<<<<< HEAD
     <string>~~</string>
+=======
+    <string>~~~~~</string>
+>>>>>>> origin/master
    </property>
    <property name="toolTip">
     <string>Inserts a full line of &quot;~&quot; symbols</string>
@@ -285,7 +330,11 @@
   </action>
   <action name="actionHeader">
    <property name="text">
+<<<<<<< HEAD
     <string>---</string>
+=======
+    <string>---abc</string>
+>>>>>>> origin/master
    </property>
    <property name="toolTip">
     <string>Starts a header line</string>
@@ -294,15 +343,26 @@
     <string>Alt+-</string>
    </property>
   </action>
+<<<<<<< HEAD
   <action name="actionMarkedList">
+=======
+  <action name="actionList">
+>>>>>>> origin/master
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
+<<<<<<< HEAD
     <string>+ Ls</string>
    </property>
    <property name="toolTip">
     <string>Marked list</string>
+=======
+    <string>+ List</string>
+   </property>
+   <property name="toolTip">
+    <string>Unmarked list</string>
+>>>>>>> origin/master
    </property>
    <property name="shortcut">
     <string>Alt+=</string>
@@ -325,7 +385,11 @@
     <bool>true</bool>
    </property>
    <property name="text">
+<<<<<<< HEAD
     <string>123 Ls</string>
+=======
+    <string>123 List</string>
+>>>>>>> origin/master
    </property>
    <property name="shortcut">
     <string>Alt+1</string>
@@ -384,6 +448,7 @@
     <string>Alt+S</string>
    </property>
   </action>
+<<<<<<< HEAD
   <action name="actionLecture">
    <property name="text">
     <string>#1</string>
@@ -411,6 +476,10 @@
  <tabstops>
   <tabstop>tabWidget</tabstop>
  </tabstops>
+=======
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+>>>>>>> origin/master
  <resources>
   <include location="resources.qrc"/>
  </resources>

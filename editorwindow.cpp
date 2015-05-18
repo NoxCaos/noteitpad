@@ -3,11 +3,20 @@
 
 #include "aboutwindow.h"
 
+<<<<<<< HEAD
 #include <QDebug>
+=======
+
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QTextStream>
+#include <QTime>
+>>>>>>> origin/master
 
 
 EditorWindow::EditorWindow(QWidget *parent) :
     QMainWindow(parent),
+<<<<<<< HEAD
     ui(new Ui::EditorWindow), editor(new EditorWidget())
 {
     ui->setupUi(this);
@@ -17,6 +26,17 @@ EditorWindow::EditorWindow(QWidget *parent) :
     editor->setFocus();
 
     //addAction(ui->actionSaveAs);
+=======
+    ui(new Ui::EditorWindow)
+{
+    ui->setupUi(this);
+    ui->txtEditorField->installEventFilter(this);
+
+    this->setFixedSize(width(), height());
+    addAction(ui->actionSaveAs);
+
+    resetToBaseState();
+>>>>>>> origin/master
 
 }
 
@@ -25,6 +45,7 @@ EditorWindow::~EditorWindow()
     delete ui;
 }
 
+<<<<<<< HEAD
 // Resets menu buttons to their default state
 void EditorWindow::setStateToDefault()
 {
@@ -77,16 +98,52 @@ void EditorWindow::SetLetters(bool isCapital){
         capital.setFontCapitalization(QFont::MixedCase);
     }
     txtEditor->setCurrentCharFormat(capital);
+=======
+// Shortcuts implementation
+void EditorWindow::on_actionList_triggered(bool condition)
+{
+    // Switch button states
+    ui->actionNumberedList->setEnabled(!condition);
+
+    // Setup list states
+    markedListOn = condition;
+
+    if (condition) {
+        ui->txtEditorField->appendPlainText(QString::fromUtf8("+ "));
+    }
+}
+
+void EditorWindow::on_actionNumberedList_triggered(bool condition)
+{
+    // Switch button states
+    ui->actionList->setEnabled(!condition);
+
+    // Setup list states
+    numberedListOn = condition;
+
+    if (!numberedListOn) {
+        numberedListCounter = 1;
+    }
+
+    if (condition) {
+        ui->txtEditorField->appendPlainText(QString::fromUtf8("1. "));
+    }
+>>>>>>> origin/master
 }
 
 bool EditorWindow::eventFilter(QObject *obj, QEvent *e)
 {
+<<<<<<< HEAD
     if (obj == txtEditor && e->type() == QEvent::KeyRelease) {
+=======
+    if (obj == ui->txtEditorField && e->type() == QEvent::KeyRelease) {
+>>>>>>> origin/master
         QKeyEvent *keyEvent = static_cast<QKeyEvent*>(e);
         if (keyEvent->key() == Qt::Key_Return ||
             keyEvent->key() == Qt::Key_Enter)
         {
             if (markedListOn) {
+<<<<<<< HEAD
                 txtEditor->appendPlainText(QString::fromUtf8("+ "));
             }
             else if (numberedListOn) {
@@ -121,13 +178,28 @@ bool EditorWindow::eventFilter(QObject *obj, QEvent *e)
         }
         else {
             SetLetters(false);
+=======
+                ui->txtEditorField->appendPlainText(QString::fromUtf8("+ "));
+            }
+            else if (numberedListOn) {
+                ui->txtEditorField->insertPlainText(QString::number(++numberedListCounter) +
+                                                    QString::fromUtf8(". "));
+            }
+
+            return true;
+        }
+        else {
+>>>>>>> origin/master
             return QMainWindow::eventFilter(obj, e);
         }
     }
     else {
         return QMainWindow::eventFilter(obj, e);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 }
 
 void EditorWindow::resetToBaseState()
@@ -141,8 +213,11 @@ void EditorWindow::resetToBaseState()
     numberedListOn = false;
     numberedListCounter = 1;
 
+<<<<<<< HEAD
     this->lectureNameEdit = false;
 
+=======
+>>>>>>> origin/master
     textWasChanged = false;
     documentWasSaved = false;
 
@@ -154,11 +229,16 @@ void EditorWindow::resetToBaseState()
 
 void EditorWindow::on_actionLineTildas_triggered()
 {
+<<<<<<< HEAD
     txtEditor->appendPlainText("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+=======
+    ui->txtEditorField->appendPlainText("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+>>>>>>> origin/master
 }
 
 void EditorWindow::on_actionHeader_triggered()
 {
+<<<<<<< HEAD
     txtEditor->insertPlainText("------------");
     SetLetters(true);
 }
@@ -174,6 +254,11 @@ void EditorWindow::on_actionLecture_triggered()
     txtEditor->appendPlainText("\n===Lecture #");
     this->lectureNameEdit = true;
 }
+=======
+    ui->txtEditorField->insertPlainText("------------");
+}
+
+>>>>>>> origin/master
 
 
 // Save/Load functionality implementation
@@ -211,7 +296,11 @@ void EditorWindow::on_actionSave_triggered()
         // Write contents to txt file:
         QTextStream out(&file);
         out.setCodec("UTF-8");
+<<<<<<< HEAD
         out << txtEditor->toPlainText();
+=======
+        out << ui->txtEditorField->toPlainText();
+>>>>>>> origin/master
 
         // Change system variables
         currentFileName = saveFileName;
@@ -267,10 +356,15 @@ void EditorWindow::on_actionOpen_triggered()
         // Reset window
         resetToBaseState();
 
+<<<<<<< HEAD
         // txtEditor = CreateTab(QFileInfo(file).baseName());
 
         // Insert data into editor
         txtEditor->setPlainText(contents);
+=======
+        // Insert data into editor
+        ui->txtEditorField->setPlainText(contents);
+>>>>>>> origin/master
         currentFileName = loadFileName;
 
         documentWasSaved = true;
@@ -304,6 +398,7 @@ void EditorWindow::on_actionNew_triggered()
         return;
     }
     // Reset window
+<<<<<<< HEAD
     txtEditor->clear();
     resetToBaseState();
     //CreateTab();
@@ -311,6 +406,17 @@ void EditorWindow::on_actionNew_triggered()
 
 // Supplemental functionality
 
+=======
+    ui->txtEditorField->clear();
+    resetToBaseState();
+}
+
+// Supplemental functionality
+void EditorWindow::on_txtEditorField_textChanged()
+{
+    textWasChanged = true;
+}
+>>>>>>> origin/master
 
 bool EditorWindow::haveUnsavedChanges()
 {
@@ -341,6 +447,7 @@ bool EditorWindow::haveUnsavedChanges()
     return false;
 }
 
+<<<<<<< HEAD
 
 
 void EditorWindow::on_searchButton_clicked()
@@ -415,3 +522,10 @@ void EditorWindow::on_tabWidget_currentChanged(int index)
     qDebug() << editor << endl;
 }
 
+=======
+void EditorWindow::on_actionHelp_triggered()
+{
+    AboutWindow *about = new AboutWindow(this);
+    about->show();
+}
+>>>>>>> origin/master
